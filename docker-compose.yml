@@ -1,20 +1,39 @@
 ---
 version: '3'
 services:
+  rabbitmq:
+    image: rabbitmq:3.8.3-beta.2-management
+    hostname: rabbit-mq
+    container_name: rabbit-mq
+    ports:
+      - '15671-15672:15671-15672'
+      - "5672:5672"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    labels:
+      NAME: "rabbitmq1"
+#    volumes:
+#      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      #- "./rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro"
+      #- "./autocluster-0.4.1.ez:/usr/lib/rabbitmq/lib/rabbitmq_server-3.5.5/plugins/autocluster-0.4.1.ez"
+
   mongodb:
     # https://medium.com/faun/managing-mongodb-on-docker-with-docker-compose-26bf8a0bbae3
     image: mongo
-    hostname: mongodb
-    container_name: mondongdb
+    hostname: mongo-db
+    container_name: mongo-db
     ports:
       - '27017:27017'
-    environment:
-      - MONGO_INITDB_DATABASE=mongo-db
-#      - MONGO_INITDB_ROOT_USERNAME=[USERNAME]
-#      - MONGO_INITDB_ROOT_PASSWORD=[PASSWORD]
+        #environment:
+            #      - MONGO_INITDB_DATABASE=mongo-db
+            #      - MONGO_INITDB_ROOT_USERNAME=[USERNAME]
+            #      - MONGO_INITDB_ROOT_PASSWORD=[PASSWORD]
     volumes:
       - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
-      - ./mongo-volume:/data/db
+      - ./mongo-volume:/data/db  # [LOCAL_FOLDER]:[DOCKER_FOLDER]
 
   zookeeper:
     image: confluentinc/cp-zookeeper:5.3.2
