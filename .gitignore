@@ -4,11 +4,18 @@
 # Ignore Gradle build output directory
 build
 
-# Ignore Intellij files
-.idea
 
 # Ignore Docker files
 docker
+
+# Ignore Intellij files
 /dev-environment.iml
 /dev-environment.ipr
 /dev-environment.iws
+/.idea/dataSources/
+/.idea/dataSources.local.xml
+/.idea/misc.xml
+/.idea/dev-environment.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
