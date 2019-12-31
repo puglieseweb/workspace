@@ -1,6 +1,17 @@
 ---
 version: '3'
 services:
+  mysql:
+    image: mysql
+    hostname: mysql
+    container_name: mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./docker/volumes/mysql/datadir:/var/lib/mysql
+        #- ./docker/volumes/mysql/my.cnf:/etc/mysql/my.cnf
   rabbitmq:
     image: rabbitmq:3.8.3-beta.2-management
     hostname: rabbit-mq
@@ -16,9 +27,9 @@ services:
     labels:
       NAME: "rabbitmq1"
 #    volumes:
-#      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
-      #- "./rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro"
-      #- "./autocluster-0.4.1.ez:/usr/lib/rabbitmq/lib/rabbitmq_server-3.5.5/plugins/autocluster-0.4.1.ez"
+#      - "./docker/volumes/rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      #- "./docker/volumes/rabbitmq/rabbitmq.config:/etc/rabbitmq/rabbitmq.config:ro"
+      #- "./docker/volumes/rabbitmq/autocluster-0.4.1.ez:/usr/lib/rabbitmq/lib/rabbitmq_server-3.5.5/plugins/autocluster-0.4.1.ez"
 
   mongodb:
     # https://medium.com/faun/managing-mongodb-on-docker-with-docker-compose-26bf8a0bbae3
@@ -32,8 +43,8 @@ services:
             #      - MONGO_INITDB_ROOT_USERNAME=[USERNAME]
             #      - MONGO_INITDB_ROOT_PASSWORD=[PASSWORD]
     volumes:
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
-      - ./mongo-volume:/data/db  # [LOCAL_FOLDER]:[DOCKER_FOLDER]
+      - ./docker/volumes/mongodb/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
+      - ./docker/volumes/mongodb/mongo-volume:/data/db  # [LOCAL_FOLDER]:[DOCKER_FOLDER]
 
   zookeeper:
     image: confluentinc/cp-zookeeper:5.3.2
