@@ -9,3 +9,6 @@ build
 
 # Ignore Docker files
 docker
+/dev-environment.iml
+/dev-environment.ipr
+/dev-environment.iws
