@@ -1,0 +1,9 @@
+---
+version: '3'
+services:
+  rabbitmq:
+     entrypoint: ["echo", "Service foo disabled"]          
+  mongodb:
+     entrypoint: ["echo", "Service foo disabled"]
+  mysql:
+     entrypoint: ["echo", "Service foo disabled"]
