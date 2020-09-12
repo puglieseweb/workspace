@@ -1,6 +1,6 @@
-package com.puglieseweb.app.billswallet.controller;
+package com.puglieseweb.core.services.qr.registration.controller;
 
-import com.puglieseweb.app.billswallet.services.RegistrationService;
+import com.puglieseweb.core.services.qr.registration.services.RegistrationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;

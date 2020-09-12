@@ -1,4 +1,4 @@
-package com.puglieseweb.app.billswallet.domain;
+package com.puglieseweb.core.services.qr.registration.domain;
 
 
 import lombok.Builder;

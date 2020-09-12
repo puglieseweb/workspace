@@ -1,6 +1,6 @@
-package com.puglieseweb.app.billswallet.services.kafka;
+package com.puglieseweb.core.services.qr.registration.services.kafka;
 
-import com.puglieseweb.app.billswallet.domain.Registration;
+import com.puglieseweb.core.services.qr.registration.domain.Registration;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.KStream;
 import org.apache.kafka.streams.kstream.Materialized;

@@ -1,4 +1,4 @@
-package com.puglieseweb.app.billswallet.services;
+package com.puglieseweb.core.services.qr.registration.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

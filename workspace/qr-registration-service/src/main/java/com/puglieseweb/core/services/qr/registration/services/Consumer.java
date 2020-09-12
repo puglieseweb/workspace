@@ -1,4 +1,4 @@
-package com.puglieseweb.app.billswallet.services;
+package com.puglieseweb.core.services.qr.registration.services;
 
 import org.apache.kafka.clients.producer.Producer;
 import org.slf4j.Logger;

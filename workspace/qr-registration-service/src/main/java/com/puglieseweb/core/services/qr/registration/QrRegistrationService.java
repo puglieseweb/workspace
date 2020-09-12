@@ -1,13 +1,13 @@
-package com.puglieseweb.app.billswallet;
+package com.puglieseweb.core.services.qr.registration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RegistrationService {
+public class QrRegistrationService {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RegistrationService.class, args);
+		SpringApplication.run(QrRegistrationService.class, args);
 	}
 
 }
