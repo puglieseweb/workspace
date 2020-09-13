@@ -1,0 +1,8 @@
+server:
+  port: 9001
+logging.level:
+  root: WARN
+  com.puglieseweb: DEBUG
+spring:
+  kafka:
+    topic: users
