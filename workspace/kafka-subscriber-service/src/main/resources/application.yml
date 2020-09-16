@@ -5,4 +5,4 @@ logging.level:
   com.puglieseweb: DEBUG
 spring:
   kafka:
-    topic: users
+    topic: test

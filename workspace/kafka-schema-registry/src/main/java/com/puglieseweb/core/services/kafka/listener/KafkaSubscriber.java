@@ -28,7 +28,7 @@ public class KafkaSubscriber {
     private String topics;
 
 
-    @KafkaListener(topics = "#{'${spring.kafka.topic}'.split(',')}", groupId = "group_id2")
+    @KafkaListener(topics = "#{'${spring.kafka.topic}'.split(',')}", groupId = "group_id1")
     public void listen(ConsumerRecord<?, ?> cr) throws Exception {
         LOGGER.info("kafka topic {} has massage {}", topics, cr.toString());
     }
