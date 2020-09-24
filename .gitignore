@@ -6,7 +6,7 @@ build
 
 
 # Ignore Docker files
-docker
+enviroment/docker
 
 # Ignore Intellij files
 /dev-environment.iml
@@ -19,3 +19,6 @@ docker
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/.idea/encodings.xml
+/.idea/gradle.xml
+

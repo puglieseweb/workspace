@@ -1,0 +1,14 @@
+server:
+  port: 9000
+logging.level:
+  root: WARN
+  com.puglieseweb: DEBUG
+spring:
+  kafka:
+    topic: users
+    consumer:
+      bootstrap-servers: localhost:9094
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
