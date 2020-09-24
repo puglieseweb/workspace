@@ -6,7 +6,7 @@ build
 
 
 # Ignore Docker files
-docker
+enviroment/docker
 
 # Ignore Intellij files
 /dev-environment.iml

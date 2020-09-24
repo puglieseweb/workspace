@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "675328d3-e4ba-4d81-81be-ade8ffe4c21e",
+		"name": "Udemy - Spring Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order 1 Random Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orderLocation\": \"{{$randomCountry}}\",\r\n  \"creditCardNumber\": \"{{$randomBankAccount}}{{$randomBankAccount}}\",\r\n  \"items\": [\r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order 2 Random Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orderLocation\": \"{{$randomCountry}}\",\r\n  \"creditCardNumber\": \"{{$randomBankAccount}}{{$randomBankAccount}}\",\r\n  \"items\": [\r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    },\r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order 3 Random Items",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orderLocation\": \"{{$randomCountry}}\",\r\n  \"creditCardNumber\": \"{{$randomBankAccount}}{{$randomBankAccount}}\",\r\n  \"items\": [\r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    },\r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    },    \r\n    {\r\n      \"itemName\": \"{{$randomProductMaterial}} {{$randomProduct}}\",\r\n      \"price\": {{$randomInt}},\r\n      \"quantity\": {{$randomInt}}\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Promotion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"promotionCode\" : \"{{$randomWord}}{{$randomInt}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/promotion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"promotion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Discount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ab64c600-dab0-45d1-b2c3-71f3c725dd23",
+						"exec": [
+							"pm.environment.set(\"randomDiscountPercentage\", _.random(1, 10) * 5)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"discountCode\": \"{{$randomColor}}{{$randomInt}}\",\n    \"discountPercentage\": {{randomDiscountPercentage}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/discount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Plastic & Non Plastic Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderLocation\": \"{{$randomCountry}}\",\n    \"creditCardNumber\": \"{{$randomBankAccount}}{{$randomBankAccount}}\",\n    \"items\": [\n        {\n            \"itemName\": \"Cotton Dog\",\n            \"price\": 80,\n            \"quantity\": 250\n        },\n        {\n            \"itemName\": \"Plastic Cat\",\n            \"price\": 400,\n            \"quantity\": 500\n        },\n        {\n            \"itemName\": \"Wooden Horse\",\n            \"price\": 700,\n            \"quantity\": 90\n        },\n        {\n            \"itemName\": \"Steel Pig\",\n            \"price\": 350,\n            \"quantity\": 270\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3516c804-5770-4c49-8fa2-cf5143050fdb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e4ce8704-7648-47c4-af04-afa03c4855fe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

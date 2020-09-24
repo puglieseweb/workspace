@@ -1,0 +1,186 @@
+# Consumer - Masked Credit Card Stream  
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order-masked
+
+  
+# Consumer - CommodityOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.order-masked
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-one
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.reward-one
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.storage-one
+
+
+# Consumer - CommodityTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-two.plastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-two.notplastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.reward-two
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.storage-two
+
+  
+# Consumer - CommodityThree Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-three.plastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-three.notplastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.reward-three
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.storage-three
+
+
+# Consumer - CommodityFour Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-four.plastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-four.notplastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.reward-four
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.storage-four
+
+
+# Consumer - CommoditySix Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-six.plastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.pattern-six.notplastic
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.reward-six
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.storage-six
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.IntegerDeserializer --topic t.commodity.fraud-six
+
+
+# Consumer - FeedbackOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-one-good
+
+
+# Consumer - FeedbackTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-two-good
+
+
+# Consumer - FeedbackThree Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-three-good
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-three-bad
+
+
+# Consumer - FeedbackFour Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-four-good
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-four-bad
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-four-good-count
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-four-bad-count
+
+
+# Consumer - FeedbackFive Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-five-good
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-five-bad
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-five-good-count
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-five-bad-count
+
+
+# Consumer - FeedbackSix Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-six-good
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback-six-bad
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-six-good-count
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-six-bad-count
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-six-good-count-word
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.feedback-six-bad-count-word
+
+
+# Consumer - FlashSaleVoteOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.flashsale.vote
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.flashsale.vote-user-item
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.flashsale.vote-one-result
+
+
+# Consumer - FlashSaleVoteTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.flashsale.vote
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.flashsale.vote-user-item
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.flashsale.vote-two-result
+
+
+# Consumer - FeedbackRatingOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback.rating-one
+
+
+# Consumer - FeedbackRatingTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.feedback.rating-two
+
+
+# Consumer - InventoryOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.inventory-total-one
+
+
+# Consumer - InventoryTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.inventory-total-two
+
+
+# Consumer - InventoryThree Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer --topic t.commodity.inventory-total-three
+
+
+# Consumer - InventoryFour Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.inventory-four
+
+# Consumer - InventoryFive Stream
+
+Using print
+
+# Consumer - InventorySix Stream
+
+Using print
+
+# Consumer - OnlineOrderPaymentOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.online-order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.online-payment
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.join-order-payment-one
+
+# Consumer - OnlineOrderPaymentTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.join-order-payment-two
+
+# Consumer - OnlineOrderPaymentThree Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.join-order-payment-three
+
+#Consumer - WebVoteOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.web.vote-one-result
+
+
+#Consumer - WebVoteTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.web.vote-two-result
+
+
+#Consumer - WebVoteThree Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.web.vote-three-result
+
+
+#Consumer - WebVoteFour Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --property print.timestamp=true --topic t.commodity.web.vote-four-result
+
+
+#Consumer - PremiumOfferOne Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true --topic t.commodity.premium-offer-one
+
+
+#Consumer - PremiumOfferTwo Stream
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --property print.key=true--topic t.commodity.premium-offer-two

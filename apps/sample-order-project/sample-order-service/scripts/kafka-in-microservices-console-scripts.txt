@@ -1,0 +1,16 @@
+Kafka topic
+
+kafka-topics.sh --bootstrap-server localhost:9092 --list
+kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t.commodity.order
+kafka-topics.sh --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic t.commodity.promotion
+
+----------------------------------------------------------------------------------------------------------
+Kafka console consumer
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.order
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t.commodity.promotion
+
+----------------------------------------------------------------------------------------------------------
+Kafka console producer
+
+kafka-console-producer.sh --broker-list localhost:9092 --topic t.commodity.promotion

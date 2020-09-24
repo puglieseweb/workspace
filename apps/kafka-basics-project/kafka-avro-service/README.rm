@@ -1,0 +1,8 @@
+# Avro Plugin
+To properly run the Avro Plugin in intellij:
+* first run `gradle build`,
+* and after that run `gradle idea`. I
+
+More information can be found here: https://github.com/davidmc24/gradle-avro-plugin
+
+
