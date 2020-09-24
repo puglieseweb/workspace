@@ -1,6 +1,6 @@
 # Overview
 
-This [docker-compose.yml](enviroment/docker-compose.yml) launches my own development environments running services such as the Confluent Platform.
+The [enviroments/docker-compose.yml](enviroment/docker-compose.yml) launches my own development environments running services such as the Confluent Platform.
 
 ## What does this project provide? 
 * Docker Engine nodes capable of running containers
