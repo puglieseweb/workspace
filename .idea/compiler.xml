@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.8/448003bc1b234aac04b58e27d7755c12c3ec4236/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="kafka-streaming-service.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafka-avro-service.main" target="1.8" />
+      <module name="kafka-avro-service.test" target="1.8" />
+      <module name="kafka-schema-registry.main" target="11" />
+      <module name="kafka-schema-registry.test" target="11" />
+      <module name="kafka-stream.main" target="14" />
+      <module name="kafka-stream.test" target="14" />
+      <module name="kafka-subscriber-service.main" target="11" />
+      <module name="kafka-subscriber-service.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
